@@ -114,7 +114,6 @@ npx serve .
   ```html
   https://github.com/Faruk4040/Myntra-Clone
   ```
-- **Student Academic & Performance Management System:** Object-oriented Java/C++ coursework project with structured Case Study modal.
 
 ---
 

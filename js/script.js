@@ -491,59 +491,6 @@
       }
     ],
     "footerHtml": "\n      <div class=\"modal-actions-between\" style=\"margin-top:24px; padding-top:16px; border-top:1px solid var(--border-subtle);\">\n        <a href=\"https://github.com/Faruk4040/Myntra-Clone\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary\">\n          <span>View Verified GitHub Repository</span>\n          <svg viewBox=\"0 0 20 20\" fill=\"currentColor\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z\" clip-rule=\"evenodd\"/></svg>\n        </a>\n        <div class=\"modal-actions-right\">\n          <button type=\"button\" class=\"btn btn-outline\" id=\"project-modal-inner-close\">Close Case Study</button>\n        </div>\n      </div>\n    "
-  },
-  "studentmanagement": {
-    "title": "Student Academic & Performance Management System",
-    "icon": "💻",
-    "badge": "Object-Oriented Programming & Academic Records",
-    "lead": "A structured desktop data management system engineered in Java and C++ to maintain student records, evaluate GPA/SGPA metrics, perform algorithmic sorting, and ensure dependable file persistence.",
-    "cards": [
-      {
-        "num": "01",
-        "heading": "Problem Statement",
-        "p": "Academic institutions generate large volumes of student performance records that require systematic calculation of grade points, secure file storage, and rapid search capabilities by roll number or department."
-      },
-      {
-        "num": "02",
-        "heading": "Solution & Architecture",
-        "intro": "Engineered using core Object-Oriented Programming (OOP) principles and algorithmic data structures:",
-        "list": [
-          "<strong>Class Hierarchy:</strong> Separate abstractions for Person, Student, Course, and AcademicTranscript.",
-          "<strong>Data Structures:</strong> Dynamic collections and arrays optimized for quick lookups and sequential file persistence.",
-          "<strong>Algorithmic Operations:</strong> Binary search algorithms on sorted student IDs, rank calculation, and sorting by GPA.",
-          "<strong>File I/O Persistence:</strong> Structured file stream handlers ensuring persistence across program executions."
-        ]
-      },
-      {
-        "num": "03",
-        "heading": "Tools & Technologies",
-        "techTags": [
-          "Java",
-          "C++",
-          "Object-Oriented Programming (OOP)",
-          "Data Structures & Algorithms (DSA)",
-          "File I/O Streams",
-          "Defensive Programming"
-        ]
-      },
-      {
-        "num": "04",
-        "heading": "Key Implemented Features",
-        "list": [
-          "<strong>Academic GPA Engine:</strong> Automated calculation of weighted course grade points and semester averages.",
-          "<strong>Fast Search & Filter:</strong> Algorithmic retrieval of student records by Roll Number, Name, or Branch.",
-          "<strong>Persistent Storage:</strong> Saves, reads, and updates records into structured disk files with error recovery.",
-          "<strong>Input Verification:</strong> Defensive checks guarding against invalid credit counts, duplicate roll numbers, and out-of-range marks."
-        ]
-      },
-      {
-        "num": "05",
-        "heading": "Verified Outcomes & Coursework Learnings",
-        "fullWidth": true,
-        "p": "Reinforced foundational understanding of OOP paradigms (abstraction, encapsulation, polymorphism), computational complexity analysis (Big-O), memory safety, and dependable file stream operations."
-      }
-    ],
-    "footerHtml": "\n      <div class=\"modal-actions-between\" style=\"margin-top:24px; padding-top:16px; border-top:1px solid var(--border-subtle);\">\n        <a href=\"https://github.com/Faruk4040\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary\">\n          <span>View GitHub Profile</span>\n          <svg viewBox=\"0 0 20 20\" fill=\"currentColor\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z\" clip-rule=\"evenodd\"/></svg>\n        </a>\n        <div class=\"modal-actions-right\">\n          <button type=\"button\" class=\"btn btn-outline\" id=\"project-modal-inner-close\">Close Case Study</button>\n        </div>\n      </div>\n    "
   }
 };
 
