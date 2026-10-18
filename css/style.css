@@ -1185,128 +1185,6 @@ textarea:focus-visible {
   margin-bottom: 0;
 }
 
-/* Immediate Highlights Grid (4 Stat Cards) */
-.about-highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 48px;
-}
-
-.about-stat-card {
-  position: relative;
-  background: var(--bg-card);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 22px 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  transition: all var(--transition-normal);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.about-stat-card:hover {
-  border-color: rgba(56, 189, 248, 0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 26px -4px rgba(0, 0, 0, 0.45), 0 0 18px -2px rgba(56, 189, 248, 0.18);
-  background: var(--bg-card-hover);
-}
-
-.stat-card-icon-wrap {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  color: var(--accent-cyan);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.highlight-cgpa .stat-card-icon-wrap {
-  background: rgba(16, 185, 129, 0.12);
-  border-color: rgba(16, 185, 129, 0.28);
-  color: #34d399;
-}
-
-.highlight-cgpa:hover {
-  border-color: rgba(16, 185, 129, 0.45);
-  box-shadow: 0 12px 26px -4px rgba(0, 0, 0, 0.45), 0 0 20px -2px rgba(16, 185, 129, 0.2);
-}
-
-.highlight-status .status-pulse-wrap {
-  background: rgba(16, 185, 129, 0.1);
-  border-color: rgba(16, 185, 129, 0.28);
-}
-
-.active-dot {
-  width: 10px;
-  height: 10px;
-  background-color: var(--accent-emerald);
-  border-radius: var(--radius-full);
-  position: relative;
-  box-shadow: 0 0 10px var(--accent-emerald);
-}
-
-.active-dot::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--radius-full);
-  background-color: var(--accent-emerald);
-  animation: pulse-ring 1.8s infinite;
-}
-
-.stat-card-content {
-  flex-grow: 1;
-  min-width: 0;
-}
-
-.stat-card-value {
-  display: block;
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #ffffff;
-  font-family: var(--font-mono);
-  line-height: 1.15;
-}
-
-.highlight-cgpa .stat-card-value {
-  color: #34d399;
-}
-
-.highlight-status .stat-card-value {
-  color: var(--accent-cyan);
-  font-size: 1.15rem;
-}
-
-.stat-card-label {
-  display: block;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--accent-sky);
-  margin-top: 4px;
-}
-
-.stat-card-sub {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* Point-Wise 4 Distinct Feature Cards */
 .about-pillars-grid {
   display: grid;
@@ -1396,172 +1274,6 @@ textarea:focus-visible {
   color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 0;
-}
-
-/* Technical Skills: Scannable Chips */
-.about-skills-scannable {
-  background: var(--bg-card);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
-  padding: 34px 30px;
-  margin-bottom: 48px;
-  box-shadow: var(--shadow-sm);
-}
-
-.scannable-header {
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.scannable-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent-sky);
-  background: rgba(56, 189, 248, 0.1);
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(56, 189, 248, 0.22);
-}
-
-.scannable-title {
-  font-size: 1.3rem;
-  color: #ffffff;
-}
-
-.skills-chips-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.skill-chip-group {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  transition: all var(--transition-fast);
-}
-
-.skill-chip-group:hover {
-  border-color: rgba(56, 189, 248, 0.3);
-  background: rgba(22, 33, 56, 0.7);
-}
-
-.chip-group-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-
-.chip-group-icon {
-  font-size: 1.15rem;
-}
-
-.chip-group-name {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--accent-sky);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.chip-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-md);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  font-family: var(--font-mono);
-  transition: all var(--transition-fast);
-}
-
-.skill-chip:hover {
-  background: rgba(0, 242, 254, 0.12);
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 242, 254, 0.18);
-}
-
-/* Career Goal CTA Banner */
-.about-cta-card {
-  position: relative;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(30, 41, 59, 0.88) 100%);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  border-radius: var(--radius-xl);
-  padding: 40px;
-  box-shadow: var(--shadow-lg), 0 0 24px rgba(0, 242, 254, 0.15);
-  overflow: hidden;
-}
-
-.cta-glow-bg {
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 240px;
-  height: 240px;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
-  border-radius: var(--radius-full);
-  pointer-events: none;
-}
-
-.cta-content {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-}
-
-.cta-kicker {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent-cyan);
-  margin-bottom: 8px;
-}
-
-.cta-heading {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.cta-description {
-  font-size: 1.0313rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 24px;
-}
-
-.cta-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
 }
 
 .cta-btn {
@@ -3042,9 +2754,6 @@ textarea:focus-visible {
     padding-bottom: 64px;
   }
 
-  .about-highlights-grid {
-    grid-template-columns: 1fr;
-  }
 
   .about-pillars-grid {
     grid-template-columns: 1fr;
@@ -3578,17 +3287,6 @@ body.light-theme .chart-title {
   color: #0f172a;
 }
 
-[data-theme="light"] .edu-card,
-body.light-theme .edu-card {
-  background: #ffffff;
-  border-color: rgba(15, 23, 42, 0.08);
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
-}
-
-[data-theme="light"] .edu-degree,
-body.light-theme .edu-degree {
-  color: #0f172a;
-}
 
 [data-theme="light"] .form-wrapper-card,
 body.light-theme .form-wrapper-card {
@@ -3855,11 +3553,6 @@ body.light-theme .evidra-banner .project-category-chip {
   justify-content: center;
 }
 
-@media (max-width: 480px) {
-  .evidra-actions-bar .btn-sm {
-    flex: 1 1 100%;
-  }
-}
 
 .evidra-action-cert {
   border-color: rgba(245, 158, 11, 0.38) !important;
@@ -3929,11 +3622,6 @@ body.light-theme .evidra-action-cert:hover {
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .case-study-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .case-study-card {
   background: rgba(15, 23, 42, 0.55);
@@ -4071,11 +3759,6 @@ body.light-theme .case-study-card {
   gap: 24px;
 }
 
-@media (max-width: 768px) {
-  .snapshot-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .snapshot-col-heading {
   font-size: 0.9375rem;
