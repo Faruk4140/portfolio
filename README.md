@@ -1,4 +1,4 @@
-# Faruk Sayyad - Professional Data Analyst Portfolio Website
+# Faruk Sayyad - Data Analyst, Software Developer & AI Portfolio Website
 
 A modern, responsive, dark-themed personal portfolio website built with **HTML5**, **CSS3**, and **Vanilla JavaScript** (featuring an interactive **Chart.js** Data Analytics Engine).
 
@@ -6,11 +6,11 @@ A modern, responsive, dark-themed personal portfolio website built with **HTML5*
 
 ## 📌 Project Overview
 
-This portfolio showcases the technical skills, academic foundation, and project work of **Faruk Sayyad**, a third-year B.Tech Information Technology student at **D. Y. Patil College of Engineering, Akurdi, Pune** (CGPA: **9.28**), targeting **Data Analyst Intern** and **Junior Data Analyst** opportunities.
+This portfolio showcases the technical skills, academic foundation, and project work of **Faruk Sayyad**, a third-year B.Tech Information Technology student at **D. Y. Patil College of Engineering, Akurdi, Pune** (CGPA: **9.28**), targeting **Data Analyst**, **Software Developer**, and **AI/ML** internship and campus placement opportunities.
 
 ### Highlights & Key Features
 - **Polished Dark / Light Theme Toggle:** Clean sun/moon button in the navigation header with persistent preference via `localStorage` and real-time palette adaptation across Chart.js graphs, card surfaces, and background canvases.
-- **Project Category Filters:** Instant client-side filtering tabs for **All Projects (5)**, **Hackathon (1)**, **Data Analytics (1)**, **Web Development (2)**, and **Programming (Java/C++) (1)**.
+- **Project Category Filters:** Instant client-side filtering tabs for **All Projects (4)**, **Hackathon (1)**, **Data Analytics (1)**, and **Web Development (2)**.
 - **Evidra – The Placement Hub (Hackathon Project):** A dedicated, high-impact hackathon project card featuring 3 separate action buttons (Certificate, Live Demo / Model, Source Code), and a full 7-section Case Study overlay. All URLs are centrally managed via `EVIDRA_CONFIG`.
 - **Professional Project Case Study Modals:** Comprehensive structured overlays for every project detailing the **Problem Statement**, **Solution & Architecture**, **Tools & Technologies**, **Key Implemented Features**, and **Verified Outcomes**.
 - **Recruiter Credentials Snapshot:** Instant one-click recruiter modal in the hero section displaying academic milestones (9.28 CGPA at D. Y. Patil COE), core technical competencies, and direct PDF download links.
