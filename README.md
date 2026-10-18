@@ -109,7 +109,7 @@ npx serve .
   ```
   *When any URL is left empty (`""`), clicking the button displays a professional toast notice informing recruiters that the resource is coming soon.*
 - **Retail Sales & Performance Analytics Engine:** Integrated with the live Chart.js engine and CSV ingestion tool in `#analytics`.
-- **SmartExpense Manager:** Linked directly to your GitHub profile (@Faruk4040) with an interactive Project Case Study modal detailing architecture and features.
+- **SmartExpense Manager:** Linked directly to your GitHub profile (@Faruk4140) with an interactive Project Case Study modal detailing architecture and features.
 - **Myntra Clone:** Verified and linked directly to your active repository:
   ```html
   https://github.com/Faruk4040/Myntra-Clone
@@ -136,7 +136,7 @@ git init
 git add .
 git commit -m "Initial release of Faruk Sayyad Data Analyst Portfolio"
 git branch -M main
-git remote add origin https://github.com/Faruk4040/YOUR-REPO-NAME.git
+git remote add origin https://github.com/Faruk4140/YOUR-REPO-NAME.git
 git push -u origin main
 ```
 *(Replace `YOUR-REPO-NAME` with the name you chose in Step 1)*
@@ -151,7 +151,7 @@ git push -u origin main
    - Click **Save**.
 5. Wait 1–2 minutes. GitHub will provide your live URL:
    ```text
-   https://faruk4040.github.io/YOUR-REPO-NAME/
+   https://faruk4140.github.io/YOUR-REPO-NAME/
    ```
 
 ---
@@ -174,5 +174,7 @@ Whenever you want to update your resume, add a new project, or modify skills:
 
 - **Email:** [faruksayyad451@gmail.com](mailto:faruksayyad451@gmail.com)
 - **LinkedIn:** [linkedin.com/in/faruk-sayyad-504793333](https://www.linkedin.com/in/faruk-sayyad-504793333)
-- **GitHub:** [github.com/Faruk4040](https://github.com/Faruk4040)
+- **LeetCode:** [leetcode.com/u/faruksayyad](https://leetcode.com/u/faruksayyad/)
+- **GitHub:** [github.com/Faruk4140](https://github.com/Faruk4140)
 - **Institution:** D. Y. Patil College of Engineering, Akurdi, Pune, Maharashtra, India
+
