@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Faruk Sayyad | Aspiring Data Analyst & B.Tech IT Student</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Professional portfolio of Faruk Sayyad - Third-year B.Tech IT student at D. Y. Patil College of Engineering, Akurdi, Pune (CGPA: 9.28). Aspiring Data Analyst specializing in SQL, Python, Excel, Power BI, and interactive data analytics.">
+  <meta name="author" content="Faruk Sayyad">
+  <meta name="keywords" content="Faruk Sayyad, Data Analyst, Portfolio, Python, SQL, Power BI, Excel, D. Y. Patil College of Engineering, B.Tech IT, Data Analytics Intern">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Faruk Sayyad | Data Analyst Portfolio">
+  <meta property="og:description" content="Third-year B.Tech IT student with a 9.28 CGPA. Explore my interactive data analytics dashboard, technical skills, and web projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faruk4040.github.io/">
+  <meta name="theme-color" content="#070b14">
+
+  <!-- Inline SVG Favicon (Data/Analytics Theme) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%2300f2fe'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%230b1120'/%3E%3Cpath d='M8 24h16M11 20v-4M16 20V9M21 20v-8' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js for Interactive Data Analytics Dashboard -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+</head>
+<body class="dark-theme">
+  <!-- Scroll Progress Indicator Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Interactive Background Canvas (Lightweight Data Constellation) -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Premium Studio Custom Cursor (Desktop Non-Touch Only) -->
+  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container" class="toast-container" role="status" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo" aria-label="Faruk Sayyad Portfolio Home">
+        <div class="logo-mark">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">FS</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Faruk Sayyad</span>
+          <span class="brand-sub">Data Analyst Portfolio</span>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Primary Navigation Links -->
+      <nav class="primary-nav" id="primary-nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#analytics" class="nav-link nav-highlight">
+            <span class="nav-dot"></span>Analytics
+          </a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-action">
+            <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-sm btn-primary resume-action-btn" id="nav-resume-btn" aria-label="Download Faruk Sayyad Resume PDF">
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Resume</span>
+            </a>
+          </li>
+          <li class="nav-action nav-theme-item">
+            <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Light/Dark Theme">
+              <svg class="theme-icon theme-icon-sun" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+              </svg>
+              <svg class="theme-icon theme-icon-moon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section section-padding">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Small Status Eyebrow Badge -->
+          <div class="status-badge hero-fade-item" role="status">
+            <span class="pulse-indicator"></span>
+            <span>DATA ANALYST ASPIRANT · OPEN TO INTERNSHIPS</span>
+          </div>
+
+          <!-- Prominent Heading: FARUK SAYYAD -->
+          <h1 class="hero-name hero-fade-item"><span class="hero-name-gradient">FARUK SAYYAD</span></h1>
+
+          <!-- Professional Role Subheading -->
+          <p class="hero-role hero-fade-item">
+            Aspiring Data Analyst <span class="role-separator">|</span> Information Technology Student
+          </p>
+
+          <!-- Core Value Proposition Headline -->
+          <p class="hero-tagline hero-fade-item">
+            Turning Data Into Insights. Building Ideas Into Reality.
+          </p>
+
+          <!-- Supporting Text -->
+          <p class="hero-description hero-fade-item">
+            An Information Technology student passionate about data analytics, software development, and solving practical problems with technology. Maintaining an academic record of <strong class="cgpa-highlight">9.28 CGPA</strong> at D. Y. Patil College of Engineering, Akurdi, Pune.
+          </p>
+
+          <!-- Four Attractive Highlight Cards Directly Below Introduction -->
+          <div class="hero-highlights-grid hero-fade-item" aria-label="Key Profile Highlights">
+            
+            <!-- Highlight 1: 9.28 CGPA -->
+            <div class="hero-highlight-card highlight-featured-cgpa interactive-highlight-card">
+              <div class="hero-highlight-icon-wrap icon-gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="hero-highlight-info">
+                <span class="hero-highlight-title val-gold" id="hero-cgpa-counter" data-target="9.28">9.28 CGPA</span>
+                <span class="hero-highlight-desc">Academic Achievement</span>
+              </div>
+            </div>
+
+            <!-- Highlight 2: B.Tech IT -->
+            <div class="hero-highlight-card interactive-highlight-card">
+              <div class="hero-highlight-icon-wrap icon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <div class="hero-highlight-info">
+                <span class="hero-highlight-title">B.Tech IT</span>
+                <span class="hero-highlight-desc">Third-Year Student</span>
+              </div>
+            </div>
+
+            <!-- Highlight 3: Data Analyst Target -->
+            <div class="hero-highlight-card highlight-featured-role interactive-highlight-card">
+              <div class="hero-highlight-icon-wrap icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                  <line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
+              </div>
+              <div class="hero-highlight-info">
+                <span class="hero-highlight-title val-blue">Data Analyst</span>
+                <span class="hero-highlight-desc">Primary Career Target</span>
+              </div>
+            </div>
+
+            <!-- Highlight 4: Open to Internships -->
+            <div class="hero-highlight-card interactive-highlight-card">
+              <div class="hero-highlight-icon-wrap icon-emerald">
+                <span class="pulse-indicator"></span>
+              </div>
+              <div class="hero-highlight-info">
+                <span class="hero-highlight-title val-emerald">Open to Internships</span>
+                <span class="hero-highlight-desc">Campus Placements</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-actions hero-fade-item">
+            <a href="#projects" class="btn btn-primary btn-magnetic">
+              <span>View Projects</span>
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+
+            <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-secondary resume-action-btn btn-magnetic" id="hero-resume-btn" aria-label="Download Faruk Sayyad Resume PDF">
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+
+            <button type="button" class="btn btn-outline preview-resume-btn btn-magnetic" id="hero-resume-preview-btn" aria-label="Quick Snapshot of Faruk Sayyad's Resume and Credentials">
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Quick Snapshot</span>
+            </button>
+
+            <a href="#contact" class="btn btn-outline btn-magnetic">
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span>Get in Touch</span>
+            </a>
+
+            <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-magnetic" aria-label="Faruk Sayyad's GitHub Profile (opens in new tab)">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Card & Photo Area -->
+        <div class="hero-visual hero-fade-item">
+          <div class="profile-card parallax-card" id="hero-profile-card">
+            
+            <!-- Professional Framed Avatar -->
+            <div class="profile-avatar-wrapper">
+              <img 
+                src="assets/profile-photo.jpg" 
+                alt="Faruk Sayyad - Aspiring Data Analyst" 
+                class="profile-img" 
+                id="profile-img"
+                onerror="this.style.display='none'; document.getElementById('initials-fallback').style.display='flex';"
+              >
+              <!-- Initials Fallback if photo not yet placed -->
+              <div class="initials-fallback" id="initials-fallback" aria-label="Faruk Sayyad initials avatar">
+                <span class="initials-text">FS</span>
+                <span class="initials-badge">Data &amp; Code</span>
+              </div>
+            </div>
+
+            <!-- Profile Details Summary -->
+            <div class="profile-card-details">
+              <h2 class="profile-card-name">Faruk Sayyad</h2>
+              <p class="profile-card-title">B.Tech Information Technology</p>
+              <p class="profile-card-sub">D. Y. Patil College of Engineering, Akurdi, Pune</p>
+              
+              <div class="profile-target-role">
+                <span class="role-badge-pill">Target Role: Data Analyst Intern / Junior Data Analyst</span>
+              </div>
+
+              <!-- Clean Grounded Metadata Badges -->
+              <div class="profile-meta-list">
+                <div class="profile-meta-item">
+                  <span class="meta-icon" aria-hidden="true">📍</span>
+                  <span class="meta-text">Pune, Maharashtra, India</span>
+                </div>
+                <div class="profile-meta-item">
+                  <span class="meta-icon" aria-hidden="true">🎓</span>
+                  <span class="meta-text">9.28 CGPA · Third Year Student</span>
+                </div>
+                <div class="profile-meta-item">
+                  <span class="meta-icon" aria-hidden="true">💼</span>
+                  <span class="meta-text">Open for Internships &amp; Placements</span>
+                </div>
+              </div>
+
+              <!-- GitHub and LinkedIn links -->
+              <div class="profile-social-actions">
+                <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="profile-action-link" aria-label="Faruk Sayyad GitHub (opens in new tab)">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="profile-action-link" aria-label="Faruk Sayyad LinkedIn (opens in new tab)">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Tasteful Animated Scroll Indicator -->
+      <div class="hero-scroll-wrap hero-fade-item">
+        <a href="#about" class="hero-scroll-indicator" aria-label="Explore Portfolio">
+          <span class="scroll-mouse-icon">
+            <span class="scroll-mouse-wheel"></span>
+          </span>
+          <span class="scroll-text">EXPLORE PORTFOLIO</span>
+          <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true">
+            <path d="M7 10l5 5 5-5"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        
+        <!-- Top Section / Header & Introduction -->
+        <div class="about-intro-block reveal-on-scroll">
+          <div class="about-eyebrow-wrap">
+            <span class="about-eyebrow">ABOUT ME | DATA ANALYTICS ENTHUSIAST</span>
+          </div>
+          <h2 class="about-main-headline">
+            Turning Data Into <span class="gradient-text">Meaningful Insights.</span>
+          </h2>
+          <p class="about-lead-intro">
+            I'm Faruk Sayyad, a third-year B.Tech Information Technology student passionate about data analytics, software development, and AI. I enjoy exploring data, solving problems, and building practical technology solutions.
+          </p>
+        </div>
+
+        <!-- Point-Wise About Me: 4 Distinct Cards -->
+        <div class="about-pillars-grid">
+          
+          <!-- Card 1: Academic Excellence -->
+          <article class="about-feature-card reveal-on-scroll stagger-card">
+            <div class="feature-card-header">
+              <div class="feature-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Foundation</span>
+            </div>
+            <h3 class="feature-card-title">Academic Excellence</h3>
+            <p class="feature-card-desc">
+              Third-year B.Tech IT student at D. Y. Patil College of Engineering, Akurdi, Pune, with a 9.28 CGPA.
+            </p>
+          </article>
+
+          <!-- Card 2: Data Analytics -->
+          <article class="about-feature-card reveal-on-scroll stagger-card">
+            <div class="feature-card-header">
+              <div class="feature-icon-badge accent-analytics">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                  <line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Core Focus</span>
+            </div>
+            <h3 class="feature-card-title">Data Analytics</h3>
+            <p class="feature-card-desc">
+              Developing skills in data querying, spreadsheets, Python-based analysis, and visualization.
+            </p>
+          </article>
+
+          <!-- Card 3: Software & Full-Stack Development -->
+          <article class="about-feature-card reveal-on-scroll stagger-card">
+            <div class="feature-card-header">
+              <div class="feature-icon-badge accent-ai">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <line x1="9" y1="1" x2="9" y2="4"/>
+                  <line x1="15" y1="1" x2="15" y2="4"/>
+                  <line x1="9" y1="20" x2="9" y2="23"/>
+                  <line x1="15" y1="20" x2="15" y2="23"/>
+                  <line x1="20" y1="9" x2="23" y2="9"/>
+                  <line x1="20" y1="14" x2="23" y2="14"/>
+                  <line x1="1" y1="9" x2="4" y2="9"/>
+                  <line x1="1" y1="14" x2="4" y2="14"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Engineering</span>
+            </div>
+            <h3 class="feature-card-title">Software &amp; Full-Stack Development</h3>
+            <p class="feature-card-desc">
+              Building responsive frontend applications and exploring full-stack engineering, OOP, and AI/ML technologies.
+            </p>
+          </article>
+
+          <!-- Card 4: Project-Based Learning -->
+          <article class="about-feature-card reveal-on-scroll stagger-card">
+            <div class="feature-card-header">
+              <div class="feature-icon-badge accent-projects">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Application</span>
+            </div>
+            <h3 class="feature-card-title">Project-Based Learning</h3>
+            <p class="feature-card-desc">
+              Applying technical concepts through personal and academic projects to improve problem-solving skills.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Skills Section: My Focus Areas -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">My Focus Areas</h2>
+          <p class="section-subtitle">
+            Core analytical tools, programming languages, and computer science foundations applied across my academic coursework and hands-on projects.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="focus-areas-grid">
+          
+          <!-- Category 1: Data Analytics -->
+          <div class="focus-area-card reveal-on-scroll stagger-card">
+            <div class="focus-card-header">
+              <div class="focus-card-icon-wrap icon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                  <line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="focus-card-title">Data Analytics</h3>
+                <p class="focus-card-subtitle">Querying, spreadsheets, metrics &amp; visual storytelling</p>
+              </div>
+            </div>
+            <div class="focus-chips-grid">
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Excel</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>SQL</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Power BI</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Statistics</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Data Cleaning</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Data Visualization</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Python & Data Analysis -->
+          <div class="focus-area-card reveal-on-scroll stagger-card">
+            <div class="focus-card-header">
+              <div class="focus-card-icon-wrap icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="focus-card-title">Python &amp; Data Analysis</h3>
+                <p class="focus-card-subtitle">Data manipulation, array operations &amp; plotting</p>
+              </div>
+            </div>
+            <div class="focus-chips-grid">
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Python</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Pandas</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>NumPy</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Matplotlib</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Programming -->
+          <div class="focus-area-card reveal-on-scroll stagger-card">
+            <div class="focus-card-header">
+              <div class="focus-card-icon-wrap icon-indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="focus-card-title">Programming</h3>
+                <p class="focus-card-subtitle">Object-oriented logic &amp; procedural foundations</p>
+              </div>
+            </div>
+            <div class="focus-chips-grid">
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Java</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>C++</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Web Development -->
+          <div class="focus-area-card reveal-on-scroll stagger-card">
+            <div class="focus-card-header">
+              <div class="focus-card-icon-wrap icon-emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="focus-card-title">Web Development</h3>
+                <p class="focus-card-subtitle">Responsive structure, styling &amp; interactive logic</p>
+              </div>
+            </div>
+            <div class="focus-chips-grid">
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>HTML</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>CSS</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Computer Science & Systems -->
+          <div class="focus-area-card reveal-on-scroll stagger-card">
+            <div class="focus-card-header">
+              <div class="focus-card-icon-wrap icon-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                  <line x1="6" y1="6" x2="6.01" y2="6"/>
+                  <line x1="6" y1="18" x2="6.01" y2="18"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="focus-card-title">Computer Science &amp; Systems</h3>
+                <p class="focus-card-subtitle">Relational databases, data structures, OS &amp; networks</p>
+              </div>
+            </div>
+            <div class="focus-chips-grid">
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>DBMS</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>DSA</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Object-Oriented Programming</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Operating Systems (OS)</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Networking</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Tools & Applied Technologies -->
+          <div class="focus-area-card reveal-on-scroll stagger-card">
+            <div class="focus-card-header">
+              <div class="focus-card-icon-wrap icon-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="focus-card-title">Tools &amp; Applied Tech</h3>
+                <p class="focus-card-subtitle">Version control, environments, IoT &amp; digital strategy</p>
+              </div>
+            </div>
+            <div class="focus-chips-grid">
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Git</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>GitHub</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>VS Code</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Jupyter Notebook</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>IoT</span>
+              <span class="focus-skill-chip interactive-chip"><span class="chip-dot"></span>Digital Marketing</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Applied Work &amp; Case Studies</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Applied analytical dashboards, web applications, and object-oriented systems built during my B.Tech studies. Filter by category or explore detailed verified case studies.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Project Category Filter Bar -->
+        <div class="project-filter-bar reveal-on-scroll" role="tablist" aria-label="Filter projects by category">
+          <button type="button" class="project-filter-btn active" data-filter="all" role="tab" aria-selected="true" id="filter-all">
+            <span class="filter-text">All Projects</span>
+            <span class="filter-count">5</span>
+          </button>
+          <button type="button" class="project-filter-btn" data-filter="hackathon" role="tab" aria-selected="false" id="filter-hackathon">
+            <span class="filter-text">Hackathon</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button type="button" class="project-filter-btn" data-filter="analytics" role="tab" aria-selected="false" id="filter-analytics">
+            <span class="filter-text">Data Analytics</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button type="button" class="project-filter-btn" data-filter="web" role="tab" aria-selected="false" id="filter-web">
+            <span class="filter-text">Web Development</span>
+            <span class="filter-count">2</span>
+          </button>
+          <button type="button" class="project-filter-btn" data-filter="programming" role="tab" aria-selected="false" id="filter-programming">
+            <span class="filter-text">Programming (Java/C++)</span>
+            <span class="filter-count">1</span>
+          </button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- Project 1: Retail Sales & Performance Analytics Engine (Data Analytics) -->
+          <article class="project-card tilt-card reveal-on-scroll stagger-card" data-category="analytics">
+            <div class="card-sheen" aria-hidden="true"></div>
+            <div class="project-card-banner analytics-banner">
+              <div class="project-category-chip">Data Analytics &amp; BI</div>
+              <div class="project-visual-icon">📊</div>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Retail Sales &amp; Performance Analytics Engine</h3>
+              
+              <p class="project-desc">
+                An interactive client-side analytical dashboard that computes key business KPIs (Sales, Profit, Profit Margins, Volume) across regional segments and visualizes trends using dynamic Chart.js charts with real-time CSV ingestion.
+              </p>
+
+              <!-- Verified Implemented Features -->
+              <div class="project-features-list">
+                <h4 class="feature-title">Key Implemented Features:</h4>
+                <ul>
+                  <li><strong>Multi-Dimensional Filtering:</strong> Slice and aggregate dataset dynamically by category, region, and metrics.</li>
+                  <li><strong>Dynamic Chart Visualizations:</strong> Real-time Chart.js dual-axis revenue trends, category breakdown, and territory shares.</li>
+                  <li><strong>Client-Side CSV Parser:</strong> Ingest custom CSV datasets up to 5 MB with instant validation and table preview.</li>
+                  <li><strong>Automated Business KPIs:</strong> Immediate calculation of total revenue, units sold, net profit, and profit margins.</li>
+                </ul>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">SQL Logic</span>
+                <span class="tech-pill">Chart.js</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Data Cleaning</span>
+              </div>
+
+              <!-- Project Links / Actions -->
+              <div class="project-actions">
+                <a href="#analytics" class="btn btn-sm btn-primary">
+                  <span>Try Live Engine</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+
+                <button type="button" class="btn btn-sm btn-ghost view-project-details-btn" data-project-id="analytics">
+                  <span>Case Study</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+
+                <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Faruk Sayyad's GitHub (opens in new tab)">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Evidra – The Placement Hub (Hackathon Project) -->
+          <article class="project-card tilt-card reveal-on-scroll stagger-card" data-category="hackathon" id="card-evidra">
+            <div class="card-sheen" aria-hidden="true"></div>
+            <div class="project-card-banner evidra-banner">
+              <div class="project-category-chip">Hackathon Project</div>
+              <div class="project-visual-icon" aria-hidden="true">🎓</div>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Evidra – The Placement Hub</h3>
+              
+              <p class="project-desc">
+                A centralized placement operations and career readiness web platform built during a hackathon to unify campus recruitment workflows, automate student eligibility verification, track company drive schedules, and structure interview preparation checklists.
+              </p>
+
+              <!-- Verified Implemented Features -->
+              <div class="project-features-list">
+                <h4 class="feature-title">Key Implemented Features:</h4>
+                <ul>
+                  <li><strong>Recruitment Drive Tracking:</strong> Consolidated schedule of campus recruitment drives, company profiles, CTC packages, and deadlines.</li>
+                  <li><strong>Student Eligibility Verification:</strong> Client-side validation matching student academic profile (CGPA, branch, backlogs) against company requirements.</li>
+                  <li><strong>Placement Readiness Checklist:</strong> Interactive preparation checklist covering aptitude, DSA, core CS concepts, and mock interview milestones.</li>
+                  <li><strong>Client-Side State Persistence:</strong> Seamless local storage caching of student checklist progress and bookmarked drives with zero latency.</li>
+                </ul>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="project-tech-stack">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Local Storage</span>
+                <span class="tech-pill">Responsive UI/UX</span>
+                <span class="tech-pill">Web APIs</span>
+              </div>
+
+              <!-- Dedicated 3 Action Buttons + Case Study -->
+              <div class="project-actions evidra-actions-bar">
+                <button type="button" class="btn btn-sm btn-primary evidra-action-demo" id="evidra-card-demo-btn" aria-label="Open Evidra Live Demo or Model">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                  <span>Live Demo</span>
+                </button>
+
+                <button type="button" class="btn btn-sm btn-ghost view-project-details-btn" data-project-id="evidra" aria-label="View Evidra Case Study Details">
+                  <span>Case Study</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+
+                <button type="button" class="btn btn-sm btn-outline evidra-action-cert" id="evidra-card-cert-btn" aria-label="View Evidra Hackathon Certificate">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true">
+                    <circle cx="12" cy="8" r="6"/>
+                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+                  </svg>
+                  <span>Certificate</span>
+                </button>
+
+                <button type="button" class="btn btn-sm btn-outline evidra-action-code" id="evidra-card-code-btn" aria-label="View Evidra Source Code on GitHub">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Code</span>
+                </button>
+              </div>
+
+              <!-- Disclaimer Tag -->
+              <p class="project-disclaimer evidra-disclaimer">
+                * Hackathon Project · Contributed to frontend architecture, drive tracking &amp; eligibility logic. Certificate, live demo &amp; repository links are configurable.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 3: SmartExpense Manager (Web Development) -->
+          <article class="project-card tilt-card reveal-on-scroll stagger-card" data-category="web">
+            <div class="card-sheen" aria-hidden="true"></div>
+            <div class="project-card-banner expense-banner">
+              <div class="project-category-chip">Web Application</div>
+              <div class="project-visual-icon">💳</div>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">SmartExpense Manager</h3>
+              
+              <p class="project-desc">
+                An expense tracking and budget management web application engineered with vanilla HTML, CSS, and JavaScript. Enables users to manage daily spending, record financial transactions, and maintain structured records.
+              </p>
+
+              <!-- Verified Implemented Features -->
+              <div class="project-features-list">
+                <h4 class="feature-title">Key Implemented Features:</h4>
+                <ul>
+                  <li><strong>Expense Categorization:</strong> Classifies transactions into distinct spending categories.</li>
+                  <li><strong>Transaction Management:</strong> Dynamic addition, updating, and record keeping of items.</li>
+                  <li><strong>Spending Summaries:</strong> Instant calculation of balances and total categorized expenditures.</li>
+                  <li><strong>Responsive Interface:</strong> Clean client-side layout accessible across smartphones and desktops.</li>
+                </ul>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="project-tech-stack">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">DOM Management</span>
+              </div>
+
+              <!-- Project Links / Actions -->
+              <div class="project-actions">
+                <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Faruk Sayyad's repositories on GitHub (opens in new tab)">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub Profile</span>
+                </a>
+
+                <button type="button" class="btn btn-sm btn-ghost view-project-details-btn" data-project-id="smartexpense">
+                  <span>Case Study</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Myntra Clone (Web Development) -->
+          <article class="project-card tilt-card reveal-on-scroll stagger-card" data-category="web">
+            <div class="card-sheen" aria-hidden="true"></div>
+            <div class="project-card-banner myntra-banner">
+              <div class="project-category-chip">Web Application</div>
+              <div class="project-visual-icon">🛍️</div>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Myntra Clone</h3>
+              
+              <p class="project-desc">
+                A frontend e-commerce web application inspired by the UI/UX architecture of popular fashion shopping platforms, crafted with HTML, CSS, and JavaScript.
+              </p>
+
+              <!-- Verified Implemented Features -->
+              <div class="project-features-list">
+                <h4 class="feature-title">Key Implemented Features:</h4>
+                <ul>
+                  <li><strong>Responsive Storefront Layout:</strong> Designed to adapt cleanly across mobile, tablet, and desktop viewports.</li>
+                  <li><strong>Product Presentation:</strong> Structured catalog cards displaying fashion items, pricing, and discount details.</li>
+                  <li><strong>Header &amp; Navigation Bar:</strong> Multi-tiered category navigation header mimicking commercial retail platforms.</li>
+                  <li><strong>Client-Side Interactivity:</strong> Dynamic navigation toggling, user interactions, and catalog actions powered by JavaScript.</li>
+                </ul>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="project-tech-stack">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Responsive UI/UX</span>
+              </div>
+
+              <!-- Verified GitHub Link & Actions -->
+              <div class="project-actions">
+                <a href="https://github.com/Faruk4040/Myntra-Clone" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Myntra Clone repository on GitHub (opens in new tab)">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub Repository</span>
+                </a>
+
+                <button type="button" class="btn btn-sm btn-ghost view-project-details-btn" data-project-id="myntra">
+                  <span>Case Study</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Disclaimer Tag -->
+              <p class="project-disclaimer">
+                * Educational frontend clone inspired by Myntra UI. Not affiliated with or endorsed by Myntra.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 5: Student Academic & Performance Management System (Programming) -->
+          <article class="project-card tilt-card reveal-on-scroll stagger-card" data-category="programming">
+            <div class="card-sheen" aria-hidden="true"></div>
+            <div class="project-card-banner academic-banner">
+              <div class="project-category-chip">Core CS &amp; Programming</div>
+              <div class="project-visual-icon">💻</div>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Student Academic &amp; Performance Management System</h3>
+              
+              <p class="project-desc">
+                An object-oriented data management application developed in Java &amp; C++ during B.Tech coursework to manage student academic records, calculate cumulative grade point averages (CGPA/SGPA), perform algorithmic sorting/search, and handle persistent file records.
+              </p>
+
+              <!-- Verified Implemented Features -->
+              <div class="project-features-list">
+                <h4 class="feature-title">Key Implemented Features:</h4>
+                <ul>
+                  <li><strong>Object-Oriented Architecture:</strong> Clean encapsulation, inheritance models, and modular class contracts.</li>
+                  <li><strong>Algorithmic Searching &amp; Sorting:</strong> Fast retrieval by student ID, rank generation, and GPA sorting algorithms.</li>
+                  <li><strong>File I/O Data Persistence:</strong> Structured file serialization ensuring robust record recovery and data integrity.</li>
+                  <li><strong>Input Verification:</strong> Comprehensive boundary checking preventing invalid credit values or corrupted data.</li>
+                </ul>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="project-tech-stack">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">C++</span>
+                <span class="tech-pill">OOP</span>
+                <span class="tech-pill">Data Structures (DSA)</span>
+                <span class="tech-pill">File I/O</span>
+              </div>
+
+              <!-- Project Links / Actions -->
+              <div class="project-actions">
+                <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Faruk Sayyad's repositories on GitHub (opens in new tab)">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>GitHub Profile</span>
+                </a>
+
+                <button type="button" class="btn btn-sm btn-ghost view-project-details-btn" data-project-id="studentmanagement">
+                  <span>Case Study</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Data Analytics Dashboard Section -->
+    <section id="analytics" class="analytics-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Interactive Feature</span>
+          <h2 class="section-title">Data Analytics &amp; Visualization Engine</h2>
+          <p class="section-subtitle">
+            An interactive dashboard demonstrating dynamic data aggregation, chart rendering, and filtering. You can filter the demonstration dataset below or upload your own CSV file to test real-time client-side analysis.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Analytics Dashboard Container -->
+        <div class="dashboard-wrapper reveal-on-scroll">
+          
+          <!-- Dataset Transparency Banner -->
+          <div class="dataset-meta-bar">
+            <div class="dataset-meta-info">
+              <span class="dataset-pill">Dataset Source</span>
+              <span class="dataset-label" id="dataset-source-label">Demonstration Retail Sales &amp; Performance Dataset (Simulated Sample Data)</span>
+            </div>
+            
+            <div class="dataset-meta-actions">
+              <button type="button" class="btn btn-sm btn-outline" id="open-csv-importer-btn">
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Import Custom CSV</span>
+              </button>
+
+              <button type="button" class="btn btn-sm btn-ghost" id="reset-dataset-btn" title="Reset to standard demonstration dataset">
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                </svg>
+                <span>Reset Data</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dashboard Controls & Filters -->
+          <div class="dashboard-controls">
+            <div class="control-group">
+              <label for="category-filter" class="control-label">Filter by Category:</label>
+              <select id="category-filter" class="control-select">
+                <option value="all">All Categories</option>
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="region-filter" class="control-label">Filter by Region:</label>
+              <select id="region-filter" class="control-select">
+                <option value="all">All Regions</option>
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="metric-toggle" class="control-label">Chart Display Metric:</label>
+              <select id="metric-toggle" class="control-select">
+                <option value="Sales">Sales Revenue (₹)</option>
+                <option value="Profit">Net Profit (₹)</option>
+                <option value="Units">Units Sold</option>
+              </select>
+            </div>
+
+            <div class="control-group filter-status-group">
+              <span class="active-records-indicator" id="records-indicator">Showing 24 records</span>
+            </div>
+          </div>
+
+          <!-- Dynamic KPI Cards Row -->
+          <div class="kpi-grid">
+            
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-title">Total Sales Revenue</span>
+                <span class="kpi-icon-badge">💰</span>
+              </div>
+              <div class="kpi-value" id="kpi-total-sales">₹0</div>
+              <div class="kpi-caption" id="kpi-sales-sub">Calculated from filtered records</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-title">Total Units Sold</span>
+                <span class="kpi-icon-badge">📦</span>
+              </div>
+              <div class="kpi-value" id="kpi-total-units">0</div>
+              <div class="kpi-caption" id="kpi-units-sub">Cumulative volume</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-title">Total Net Profit</span>
+                <span class="kpi-icon-badge">📈</span>
+              </div>
+              <div class="kpi-value" id="kpi-total-profit">₹0</div>
+              <div class="kpi-caption" id="kpi-profit-margin">Profit margin: 0%</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-title">Average Record Value</span>
+                <span class="kpi-icon-badge">📊</span>
+              </div>
+              <div class="kpi-value" id="kpi-avg-sales">₹0</div>
+              <div class="kpi-caption" id="kpi-avg-sub">Mean per transaction</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-title">Top Performing Category</span>
+                <span class="kpi-icon-badge">🏆</span>
+              </div>
+              <div class="kpi-value kpi-text-value" id="kpi-top-category">None</div>
+              <div class="kpi-caption" id="kpi-top-cat-sub">Highest metric share</div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Charts Grid -->
+          <div class="charts-grid">
+            
+            <!-- Chart 1: Bar Chart (Category Breakdown) -->
+            <div class="chart-card chart-span-2">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title" id="bar-chart-title">Metric Performance by Category</h3>
+                  <p class="chart-subtitle">Aggregated totals across active category groups</p>
+                </div>
+                <span class="chart-type-tag">Bar Chart</span>
+              </div>
+              <div class="chart-container">
+                <canvas id="categoryBarChart" aria-label="Category performance bar chart" role="img"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart 2: Category Share Doughnut Chart -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">Category Distribution</h3>
+                  <p class="chart-subtitle">Proportional breakdown of active dataset</p>
+                </div>
+                <span class="chart-type-tag">Doughnut</span>
+              </div>
+              <div class="chart-container doughnut-wrap">
+                <canvas id="categoryDoughnutChart" aria-label="Category proportion doughnut chart" role="img"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart 3: Line Chart (Timeline / Trends) -->
+            <div class="chart-card chart-span-3">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">Chronological Trend Analysis</h3>
+                  <p class="chart-subtitle">Monthly trajectory of sales vs. profit performance</p>
+                </div>
+                <span class="chart-type-tag">Line Chart</span>
+              </div>
+              <div class="chart-container timeline-wrap">
+                <canvas id="trendLineChart" aria-label="Monthly trend line chart" role="img"></canvas>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Analytics Engineering Note -->
+          <div class="dashboard-footer-note">
+            <span class="note-bullet">💡</span>
+            <p>
+              <strong>Architecture Note:</strong> Built using clean Vanilla JavaScript with Chart.js. The engine processes raw CSV tabular records, computes relational aggregates, and renders responsive canvases without any heavy external framework.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Academic Pathway</span>
+          <h2 class="section-title">Education &amp; Academic Status</h2>
+          <p class="section-subtitle">
+            Formal technical education providing solid foundations in computer science, software engineering, and analytical thinking.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="education-card-wrapper reveal-on-scroll">
+          <div class="education-card">
+            
+            <div class="education-badge-col">
+              <div class="college-crest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="cgpa-pill">
+                <span class="cgpa-number" id="education-cgpa-counter" data-target="9.28">9.28</span>
+                <span class="cgpa-text">Current CGPA</span>
+              </div>
+            </div>
+
+            <div class="education-details-col">
+              <div class="education-header-info">
+                <span class="education-status-tag">Currently Enrolled · Third Year</span>
+                <h3 class="education-degree">Bachelor of Technology (B.Tech) in Information Technology</h3>
+                <h4 class="education-institution">D. Y. Patil College of Engineering, Akurdi, Pune</h4>
+                <p class="education-location">Maharashtra, India</p>
+              </div>
+
+              <div class="education-body-text">
+                <p>
+                  Pursuing my undergraduate engineering degree with an active focus on software development, data structures, relational databases, and emerging AI technologies. Maintaining an academic track record with a <strong>9.28 CGPA</strong>.
+                </p>
+              </div>
+
+              <!-- Relevant Coursework -->
+              <div class="coursework-section">
+                <h5 class="coursework-title">Relevant Academic Coursework &amp; Fundamentals:</h5>
+                <div class="coursework-tags">
+                  <span class="course-pill">Database Management Systems (DBMS)</span>
+                  <span class="course-pill">Data Structures &amp; Algorithms (DSA)</span>
+                  <span class="course-pill">Object-Oriented Programming (Java)</span>
+                  <span class="course-pill">Web Technologies</span>
+                  <span class="course-pill">Operating Systems (OS)</span>
+                  <span class="course-pill">Computer Networks (Networking)</span>
+                  <span class="course-pill">Internet of Things (IoT)</span>
+                  <span class="course-pill">Digital Marketing</span>
+                  <span class="course-pill">Discrete Mathematics &amp; Statistics</span>
+                  <span class="course-pill">Software Engineering</span>
+                </div>
+              </div>
+
+              <!-- Academic Objective -->
+              <div class="education-footer-note">
+                <strong>Current Status:</strong> Active third-year student preparing for upcoming data analyst internships and campus placement drives.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prominent Final Career Call to Action Section -->
+    <section id="career-cta" class="career-cta-section section-padding">
+      <div class="container">
+        <div class="prominent-cta-banner reveal-on-scroll">
+          <div class="cta-glow-bg" aria-hidden="true"></div>
+          <div class="cta-banner-content">
+            <span class="section-tag">Career Opportunities</span>
+            <h2 class="cta-banner-heading">Let's Turn Data Into Impact.</h2>
+            <p class="cta-banner-text">
+              I'm looking for Data Analyst internship and campus placement opportunities where I can learn, contribute to meaningful projects, and grow as a data professional.
+            </p>
+            <div class="cta-banner-actions">
+              <a href="#projects" class="btn btn-primary cta-btn btn-magnetic">
+                <span>View My Projects</span>
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+
+              <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="btn btn-secondary cta-btn btn-magnetic" aria-label="Connect with Faruk Sayyad on LinkedIn (opens in new tab)">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>Connect on LinkedIn</span>
+              </a>
+
+              <a href="#contact" class="btn btn-outline cta-btn btn-magnetic">
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+                <span>Contact Me</span>
+              </a>
+
+              <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-secondary cta-btn btn-magnetic" aria-label="Download Faruk Sayyad Resume PDF">
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Download Resume</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact &amp; Professional Channels</h2>
+          <p class="section-subtitle">
+            Whether you have an internship opportunity, campus recruitment query, or would like to discuss a project, feel free to reach out.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid reveal-on-scroll">
+          
+          <!-- Contact Channels Info -->
+          <div class="contact-info-col">
+            <h3 class="contact-col-title">Direct Communication</h3>
+            <p class="contact-col-desc">
+              I am responsive over email and LinkedIn. Don't hesitate to connect!
+            </p>
+
+            <div class="contact-cards-list">
+              
+              <!-- Email Card -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <span class="contact-label">Email Address</span>
+                  <a href="mailto:faruksayyad451@gmail.com" class="contact-value" id="email-text">faruksayyad451@gmail.com</a>
+                </div>
+                <button type="button" class="btn btn-xs btn-ghost copy-btn" id="copy-email-btn" title="Copy email address to clipboard" aria-label="Copy email address to clipboard">
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
+                    <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
+                  </svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone & WhatsApp Card -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <span class="contact-label">Phone / WhatsApp</span>
+                  <a href="tel:+918109014040" class="contact-value">+91 8109014040</a>
+                </div>
+                <a href="tel:+918109014040" class="btn btn-xs btn-ghost" aria-label="Call Faruk Sayyad">
+                  <span>Call</span>
+                </a>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <span class="contact-label">LinkedIn Profile</span>
+                  <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="contact-value" aria-label="Faruk Sayyad LinkedIn profile (opens in new tab)">
+                    linkedin.com/in/faruk-sayyad-504793333
+                  </a>
+                </div>
+                <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-ghost" aria-label="Open LinkedIn profile in new tab">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- GitHub Card -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <span class="contact-label">GitHub Repositories</span>
+                  <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="contact-value" aria-label="Faruk Sayyad GitHub profile (opens in new tab)">
+                    github.com/Faruk4040
+                  </a>
+                </div>
+                <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-ghost" aria-label="Open GitHub profile in new tab">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">D. Y. Patil College of Engineering, Akurdi, Pune, Maharashtra, India</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form with Client-Side Validation -->
+          <div class="contact-form-col">
+            <div class="form-wrapper-card">
+              <h3 class="form-title">Send a Message</h3>
+              <p class="form-subtitle">
+                Fill in the details below. This form uses client-side validation and creates a pre-formatted message ready to send via your email client.
+              </p>
+
+              <form id="contact-form" class="contact-form" novalidate>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="sender-name" class="form-label">Your Name <span class="required-star">*</span></label>
+                    <input 
+                      type="text" 
+                      id="sender-name" 
+                      name="name" 
+                      class="form-input" 
+                      placeholder="e.g. John Doe" 
+                      required 
+                      minlength="2"
+                    >
+                    <span class="form-error-msg" id="name-error">Please enter your name (at least 2 characters).</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sender-email" class="form-label">Your Email <span class="required-star">*</span></label>
+                    <input 
+                      type="email" 
+                      id="sender-email" 
+                      name="email" 
+                      class="form-input" 
+                      placeholder="e.g. name@example.com" 
+                      required
+                    >
+                    <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="sender-subject" class="form-label">Subject <span class="required-star">*</span></label>
+                  <input 
+                    type="text" 
+                    id="sender-subject" 
+                    name="subject" 
+                    class="form-input" 
+                    placeholder="e.g. Data Analyst Internship Opportunity / Campus Placement" 
+                    required 
+                    minlength="4"
+                  >
+                  <span class="form-error-msg" id="subject-error">Please enter a subject (at least 4 characters).</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="sender-message" class="form-label">Message <span class="required-star">*</span></label>
+                  <textarea 
+                    id="sender-message" 
+                    name="message" 
+                    class="form-textarea" 
+                    rows="5" 
+                    placeholder="Hello Faruk, I reviewed your portfolio and would like to discuss..." 
+                    required 
+                    minlength="10"
+                  ></textarea>
+                  <span class="form-error-msg" id="message-error">Please enter a message (at least 10 characters).</span>
+                </div>
+
+                <!-- Form Delivery Transparency Notice -->
+                <div class="form-notice">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>
+                    Submitting opens your default email client with your message pre-addressed to <strong>faruksayyad451@gmail.com</strong>.
+                  </span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                  </svg>
+                  <span>Prepare &amp; Send Message</span>
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-mark">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">FS</span>
+            <span class="logo-bracket">/&gt;</span>
+          </div>
+          <div>
+            <h3 class="footer-name">Faruk Sayyad</h3>
+            <p class="footer-tagline">B.Tech IT Student · Aspiring Data Analyst</p>
+          </div>
+        </div>
+
+        <ul class="footer-links" aria-label="Footer Navigation">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-socials">
+          <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="mailto:faruksayyad451@gmail.com" class="social-icon-btn" aria-label="Send Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Faruk Sayyad. All rights reserved.
+        </p>
+        <p class="footer-motto">
+          Designed &amp; built with semantic HTML, CSS, JavaScript &amp; Chart.js for Data Analytics opportunities.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODALS -->
+  <!-- ========================================================================= -->
+
+  <!-- Modal 1: Project Details Modal -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" hidden>
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-icon" id="project-modal-icon">📁</div>
+        <h3 class="modal-title" id="project-modal-title">Project Details</h3>
+        <button type="button" class="modal-close-btn" id="project-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="project-modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Recruiter Credentials Preview Modal -->
+  <div class="modal-backdrop" id="credentials-modal" role="dialog" aria-modal="true" aria-labelledby="credentials-modal-title" hidden>
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-icon">📋</div>
+        <h3 class="modal-title" id="credentials-modal-title">Faruk Sayyad · Recruiter Credentials Snapshot</h3>
+        <button type="button" class="modal-close-btn" id="credentials-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="credentials-modal-body">
+        <div class="recruiter-snapshot-header">
+          <div class="snapshot-candidate-info">
+            <h4 class="snapshot-name">Faruk Sayyad</h4>
+            <p class="snapshot-role">Aspiring Data Analyst · Third-Year B.Tech Information Technology</p>
+            <p class="snapshot-college">D. Y. Patil College of Engineering, Akurdi, Pune, Maharashtra</p>
+          </div>
+          <div class="snapshot-cgpa-badge">
+            <span class="cgpa-number">9.28</span>
+            <span class="cgpa-label">Academic CGPA</span>
+          </div>
+        </div>
+
+        <div class="snapshot-grid">
+          <div class="snapshot-col">
+            <h5 class="snapshot-col-heading">🎯 Target Role &amp; Availability</h5>
+            <ul class="snapshot-list">
+              <li><strong>Target Roles:</strong> Data Analyst Intern, Junior Data Analyst, Business Analyst Intern</li>
+              <li><strong>Availability:</strong> Open for Summer Internships, 6-Month Internships &amp; Campus Placements</li>
+              <li><strong>Location:</strong> Pune, Maharashtra, India (Open to Relocation / Hybrid / Remote)</li>
+            </ul>
+
+            <h5 class="snapshot-col-heading">🎓 Academic Milestones</h5>
+            <ul class="snapshot-list">
+              <li><strong>Degree:</strong> Bachelor of Technology (B.Tech) in Information Technology</li>
+              <li><strong>Institution:</strong> D. Y. Patil College of Engineering, Akurdi, Pune</li>
+              <li><strong>Affiliation:</strong> Savitribai Phule Pune University (SPPU)</li>
+              <li><strong>Status:</strong> Third-Year Undergraduate (Class of 2026)</li>
+              <li><strong>Cumulative GPA:</strong> <span class="highlight-val">9.28 CGPA</span> (Verified)</li>
+            </ul>
+          </div>
+
+          <div class="snapshot-col">
+            <h5 class="snapshot-col-heading">🛠️ Core Technical Competencies</h5>
+            <div class="snapshot-skills-block">
+              <span class="snapshot-skill-tag">SQL (Queries, Joins, Aggregation)</span>
+              <span class="snapshot-skill-tag">Python (Pandas, NumPy, Matplotlib)</span>
+              <span class="snapshot-skill-tag">Microsoft Excel (Pivot Tables, Functions)</span>
+              <span class="snapshot-skill-tag">Power BI (Interactive Dashboards)</span>
+              <span class="snapshot-skill-tag">Data Cleaning &amp; Visualization</span>
+              <span class="snapshot-skill-tag">Java &amp; C++ (OOP &amp; Data Structures)</span>
+              <span class="snapshot-skill-tag">HTML5, CSS3, JavaScript</span>
+              <span class="snapshot-skill-tag">Git &amp; GitHub</span>
+              <span class="snapshot-skill-tag">DBMS, OS, Computer Networks</span>
+              <span class="snapshot-skill-tag">IoT &amp; Digital Marketing</span>
+            </div>
+
+            <h5 class="snapshot-col-heading">📞 Contact &amp; Profiles</h5>
+            <ul class="snapshot-list">
+              <li><strong>Email:</strong> <a href="mailto:faruksayyad451@gmail.com" class="link-highlight">faruksayyad451@gmail.com</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+918109014040" class="link-highlight">+91 8109014040</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="link-highlight">linkedin.com/in/faruk-sayyad-504793333</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="link-highlight">github.com/Faruk4040</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-actions-between" style="margin-top:24px; padding-top:16px; border-top:1px solid var(--border-subtle);">
+          <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-primary resume-action-btn">
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            <span>Download Official Resume (PDF)</span>
+          </a>
+
+          <div class="modal-actions-right">
+            <a href="assets/Faruk_Sayyad_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <span>Open PDF in Tab</span>
+            </a>
+            <button type="button" class="btn btn-ghost" id="credentials-modal-inner-close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: CSV Importer Modal -->
+  <div class="modal-backdrop" id="csv-modal" role="dialog" aria-modal="true" aria-labelledby="csv-modal-title" hidden>
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-icon">📊</div>
+        <h3 class="modal-title" id="csv-modal-title">Import &amp; Analyze Custom CSV Dataset</h3>
+        <button type="button" class="modal-close-btn" id="csv-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-text">
+          Upload any standard tabular CSV file (e.g., columns such as <code>Date</code>, <code>Category</code>, <code>Sales</code>, <code>Units</code>, <code>Profit</code>) to compute real-time KPI metrics and refresh all interactive charts client-side.
+        </p>
+
+        <!-- Drag & Drop Zone -->
+        <div class="csv-dropzone" id="csv-dropzone" tabindex="0" role="button" aria-label="Upload CSV file">
+          <input type="file" id="csv-file-input" accept=".csv,text/csv" class="visually-hidden">
+          <div class="dropzone-content">
+            <svg class="dropzone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p class="dropzone-title">Click to choose a CSV file or drag &amp; drop it here</p>
+            <span class="dropzone-hint">Supports .csv files up to 5 MB with header rows</span>
+          </div>
+        </div>
+
+        <!-- CSV Status / Validation Alert Box -->
+        <div id="csv-status-box" class="csv-status-box" hidden></div>
+
+        <!-- CSV Preview Table Container -->
+        <div id="csv-preview-container" class="csv-preview-container" hidden>
+          <div class="preview-header">
+            <h4>Dataset Preview (First 5 Rows)</h4>
+            <span id="preview-row-count" class="preview-badge">0 rows detected</span>
+          </div>
+          <div class="table-responsive">
+            <table class="preview-table" id="preview-table">
+              <thead id="preview-thead"></thead>
+              <tbody id="preview-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="modal-actions-between">
+          <a href="assets/sample-data.csv" download="sample-data.csv" class="btn btn-sm btn-ghost" id="download-sample-csv-btn">
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            <span>Download Sample CSV Template</span>
+          </a>
+
+          <div class="modal-actions-right">
+            <button type="button" class="btn btn-outline" id="csv-modal-cancel">Cancel</button>
+            <button type="button" class="btn btn-primary" id="apply-csv-btn" disabled>
+              <span>Apply Dataset &amp; Update Dashboard</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/dashboard.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

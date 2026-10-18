@@ -1,0 +1,25 @@
+Date,Category,Region,Sales,Units,Profit
+2025-01-15,Electronics,North,12400,45,3100
+2025-01-20,Fashion,West,8200,120,2400
+2025-02-05,Home & Living,East,6500,55,1800
+2025-02-18,Electronics,South,15800,60,4200
+2025-03-10,Books,North,3400,85,950
+2025-03-22,Sports,West,5100,40,1350
+2025-04-05,Fashion,East,9800,140,2900
+2025-04-20,Electronics,North,18500,72,5100
+2025-05-12,Home & Living,South,7200,65,2100
+2025-05-28,Sports,East,6400,50,1700
+2025-06-15,Electronics,West,14200,54,3900
+2025-06-30,Books,South,4100,110,1200
+2025-07-14,Fashion,North,11200,165,3300
+2025-07-29,Home & Living,West,8600,75,2500
+2025-08-10,Electronics,East,19800,80,5600
+2025-08-25,Sports,North,7100,58,1950
+2025-09-08,Fashion,South,10500,150,3100
+2025-09-22,Books,West,3800,95,1050
+2025-10-05,Electronics,North,21400,85,6200
+2025-10-20,Home & Living,East,9100,82,2750
+2025-11-12,Sports,South,7800,62,2200
+2025-11-26,Fashion,West,12300,175,3700
+2025-12-10,Electronics,East,23500,95,6900
+2025-12-22,Books,North,4500,125,1350
