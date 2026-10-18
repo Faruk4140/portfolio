@@ -33,6 +33,19 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 </head>
 <body class="dark-theme">
+  <!-- Reusable SVG Symbols -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+    </symbol>
+  </svg>
+
   <!-- Scroll Progress Indicator Bar -->
   <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
 
@@ -85,9 +98,7 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
           <li class="nav-action">
             <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-sm btn-primary resume-action-btn" id="nav-resume-btn" aria-label="Download Faruk Sayyad Resume PDF">
-              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
-                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-download"></use></svg>
               <span>Resume</span>
             </a>
           </li>
@@ -208,9 +219,7 @@
             </a>
 
             <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-secondary resume-action-btn btn-magnetic" id="hero-resume-btn" aria-label="Download Faruk Sayyad Resume PDF">
-              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
-                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true"><use href="#icon-download"></use></svg>
               <span>Download Resume</span>
             </a>
 
@@ -231,9 +240,7 @@
             </a>
 
             <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-magnetic" aria-label="Faruk Sayyad's GitHub Profile (opens in new tab)">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-              </svg>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><use href="#icon-github"></use></svg>
               <span>GitHub</span>
             </a>
           </div>
@@ -288,16 +295,12 @@
               <!-- GitHub and LinkedIn links -->
               <div class="profile-social-actions">
                 <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="profile-action-link" aria-label="Faruk Sayyad GitHub (opens in new tab)">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-github"></use></svg>
                   <span>GitHub</span>
                 </a>
 
                 <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="profile-action-link" aria-label="Faruk Sayyad LinkedIn (opens in new tab)">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
                   <span>LinkedIn</span>
                 </a>
               </div>
@@ -671,9 +674,7 @@
                 </button>
 
                 <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Faruk Sayyad's GitHub (opens in new tab)">
-                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-github"></use></svg>
                   <span>GitHub</span>
                 </a>
               </div>
@@ -741,9 +742,7 @@
                 </button>
 
                 <button type="button" class="btn btn-sm btn-outline evidra-action-code" id="evidra-card-code-btn" aria-label="View Evidra Source Code on GitHub">
-                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><use href="#icon-github"></use></svg>
                   <span>Code</span>
                 </button>
               </div>
@@ -792,9 +791,7 @@
               <!-- Project Links / Actions -->
               <div class="project-actions">
                 <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Faruk Sayyad's repositories on GitHub (opens in new tab)">
-                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-github"></use></svg>
                   <span>GitHub Profile</span>
                 </a>
 
@@ -845,9 +842,7 @@
               <!-- Verified GitHub Link & Actions -->
               <div class="project-actions">
                 <a href="https://github.com/Faruk4040/Myntra-Clone" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Myntra Clone repository on GitHub (opens in new tab)">
-                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-github"></use></svg>
                   <span>GitHub Repository</span>
                 </a>
 
@@ -904,9 +899,7 @@
               <!-- Project Links / Actions -->
               <div class="project-actions">
                 <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Faruk Sayyad's repositories on GitHub (opens in new tab)">
-                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-github"></use></svg>
                   <span>GitHub Profile</span>
                 </a>
 
@@ -949,9 +942,7 @@
             
             <div class="dataset-meta-actions">
               <button type="button" class="btn btn-sm btn-outline" id="open-csv-importer-btn">
-                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                </svg>
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-download"></use></svg>
                 <span>Import Custom CSV</span>
               </button>
 
@@ -1195,9 +1186,7 @@
               </a>
 
               <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="btn btn-secondary cta-btn btn-magnetic" aria-label="Connect with Faruk Sayyad on LinkedIn (opens in new tab)">
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
                 <span>Connect on LinkedIn</span>
               </a>
 
@@ -1210,9 +1199,7 @@
               </a>
 
               <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-secondary cta-btn btn-magnetic" aria-label="Download Faruk Sayyad Resume PDF">
-                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true"><use href="#icon-download"></use></svg>
                 <span>Download Resume</span>
               </a>
             </div>
@@ -1284,9 +1271,7 @@
               <!-- LinkedIn Card -->
               <div class="contact-card">
                 <div class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
                 </div>
                 <div class="contact-card-content">
                   <span class="contact-label">LinkedIn Profile</span>
@@ -1305,9 +1290,7 @@
               <!-- GitHub Card -->
               <div class="contact-card">
                 <div class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><use href="#icon-github"></use></svg>
                 </div>
                 <div class="contact-card-content">
                   <span class="contact-label">GitHub Repositories</span>
@@ -1462,14 +1445,10 @@
 
         <div class="footer-socials">
           <a href="https://github.com/Faruk4040" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><use href="#icon-github"></use></svg>
           </a>
           <a href="https://www.linkedin.com/in/faruk-sayyad-504793333" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
           </a>
           <a href="mailto:faruksayyad451@gmail.com" class="social-icon-btn" aria-label="Send Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
@@ -1576,9 +1555,7 @@
 
         <div class="modal-actions-between" style="margin-top:24px; padding-top:16px; border-top:1px solid var(--border-subtle);">
           <a href="assets/Faruk_Sayyad_Resume.pdf" download="Faruk_Sayyad_Resume.pdf" class="btn btn-primary resume-action-btn">
-            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
-              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-download"></use></svg>
             <span>Download Official Resume (PDF)</span>
           </a>
 
@@ -1639,9 +1616,7 @@
 
         <div class="modal-actions-between">
           <a href="assets/sample-data.csv" download="sample-data.csv" class="btn btn-sm btn-ghost" id="download-sample-csv-btn">
-            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
-              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><use href="#icon-download"></use></svg>
             <span>Download Sample CSV Template</span>
           </a>
 
