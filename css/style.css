@@ -960,12 +960,12 @@ textarea:focus-visible {
 .profile-card {
   position: relative;
   width: 100%;
-  max-width: 380px;
+  max-width: 395px;
   background: var(--bg-card);
   backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
-  padding: 32px 28px;
+  padding: 30px 22px;
   text-align: center;
   box-shadow: var(--shadow-lg);
   transition: transform var(--transition-normal), border-color var(--transition-normal);
@@ -1112,14 +1112,15 @@ textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .profile-action-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
+  gap: 5px;
+  padding: 8px 12px;
   background: rgba(30, 41, 59, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
@@ -1464,12 +1465,13 @@ textarea:focus-visible {
 }
 
 .project-card-banner {
-  height: 130px;
+  min-height: 140px;
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
+  padding: 16px 18px;
+  gap: 12px;
 }
 
 .expense-banner {
@@ -3828,3 +3830,544 @@ body.light-theme .snapshot-skill-tag {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* --------------------------------------------------------------------------
+   23. Recruiter Fast-Track Summary Strip (Hero)
+   -------------------------------------------------------------------------- */
+.recruiter-fast-track {
+  margin-top: 24px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(30, 41, 59, 0.5) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.fast-track-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fast-track-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-sky);
+  text-transform: uppercase;
+}
+
+.fast-track-pill-stat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.fast-track-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 16px;
+}
+
+@media (max-width: 640px) {
+  .fast-track-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.fast-track-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ft-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+}
+
+.ft-value {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.ft-highlight-green {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.ft-links-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ft-action-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-sky);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.18s ease;
+}
+
+.ft-action-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ft-separator {
+  color: var(--text-faint);
+}
+
+[data-theme="light"] .recruiter-fast-track,
+body.light-theme .recruiter-fast-track {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%);
+  border-color: rgba(2, 132, 199, 0.28);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06), inset 0 1px 0 #ffffff;
+}
+
+[data-theme="light"] .fast-track-header,
+body.light-theme .fast-track-header {
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .fast-track-pill-stat,
+body.light-theme .fast-track-pill-stat {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #b45309;
+}
+
+[data-theme="light"] .ft-label,
+body.light-theme .ft-label {
+  color: #64748b;
+}
+
+[data-theme="light"] .ft-value,
+body.light-theme .ft-value {
+  color: #0f172a;
+}
+
+[data-theme="light"] .ft-highlight-green,
+body.light-theme .ft-highlight-green {
+  color: #059669;
+}
+
+[data-theme="light"] .ft-action-link,
+body.light-theme .ft-action-link {
+  color: #0284c7;
+}
+
+[data-theme="light"] .ft-action-link:hover,
+body.light-theme .ft-action-link:hover {
+  color: #0369a1;
+}
+
+/* --------------------------------------------------------------------------
+   24. Project Card Banners HUD Preview
+   -------------------------------------------------------------------------- */
+.banner-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.hud-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-sky);
+  letter-spacing: 0.02em;
+}
+
+.pulse-cyan {
+  background-color: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.hud-hackathon-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(245, 158, 11, 0.16);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.hud-arch-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.banner-hud-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+}
+
+.hud-stat-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hud-stat-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+
+.hud-stat-num {
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+}
+
+.hud-sparkline {
+  display: flex;
+  align-items: center;
+}
+
+.hud-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.win-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.win-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.hud-tech-pills {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.hud-micro-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .banner-hud-preview,
+body.light-theme .banner-hud-preview {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .hud-status-badge,
+body.light-theme .hud-status-badge {
+  background: rgba(224, 242, 254, 0.9);
+  border-color: #0284c7;
+  color: #0369a1;
+}
+
+[data-theme="light"] .hud-hackathon-ribbon,
+body.light-theme .hud-hackathon-ribbon {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #b45309;
+}
+
+[data-theme="light"] .hud-arch-tag,
+body.light-theme .hud-arch-tag {
+  background: rgba(241, 245, 249, 0.9);
+  border-color: rgba(15, 23, 42, 0.1);
+  color: #475569;
+}
+
+[data-theme="light"] .hud-stat-label,
+body.light-theme .hud-stat-label {
+  color: #64748b;
+}
+
+[data-theme="light"] .hud-stat-num,
+body.light-theme .hud-stat-num {
+  color: #0f172a;
+}
+
+[data-theme="light"] .win-title,
+body.light-theme .win-title {
+  color: #475569;
+}
+
+[data-theme="light"] .hud-micro-pill,
+body.light-theme .hud-micro-pill {
+  background: #f1f5f9;
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #334155;
+}
+
+/* --------------------------------------------------------------------------
+   25. Recruiter Value Matrix (About Section)
+   -------------------------------------------------------------------------- */
+.recruiter-value-block {
+  margin-top: 48px;
+  padding: 36px 32px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.4) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.recruiter-value-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 32px auto;
+}
+
+.matrix-pill {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-sky);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.recruiter-value-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.recruiter-value-sub {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.recruiter-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+@media (max-width: 900px) {
+  .recruiter-matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.matrix-card {
+  padding: 24px 22px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.matrix-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3), 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.matrix-card-num {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgba(56, 189, 248, 0.35);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.matrix-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.matrix-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+[data-theme="light"] .recruiter-value-block,
+body.light-theme .recruiter-value-block {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+  border-color: rgba(2, 132, 199, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .matrix-card,
+body.light-theme .matrix-card {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .matrix-card:hover,
+body.light-theme .matrix-card:hover {
+  border-color: rgba(2, 132, 199, 0.4);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .matrix-card-num,
+body.light-theme .matrix-card-num {
+  color: rgba(2, 132, 199, 0.35);
+}
+
+[data-theme="light"] .matrix-card-title,
+body.light-theme .matrix-card-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .matrix-card-desc,
+body.light-theme .matrix-card-desc {
+  color: #475569;
+}
+
+/* --------------------------------------------------------------------------
+   26. Recruiter Credentials Modal Upgrade
+   -------------------------------------------------------------------------- */
+#credentials-modal .modal-card {
+  max-width: 900px;
+  padding: 18px 26px;
+  max-height: 92vh;
+}
+
+#credentials-modal .modal-header {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+#credentials-modal .recruiter-snapshot-header {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+}
+
+#credentials-modal .snapshot-name {
+  font-size: 1.3rem;
+  margin-bottom: 2px;
+}
+
+#credentials-modal .snapshot-role {
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+}
+
+#credentials-modal .snapshot-college {
+  font-size: 0.8rem;
+}
+
+#credentials-modal .snapshot-grid {
+  gap: 10px 24px;
+}
+
+#credentials-modal .snapshot-col-heading {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-size: 0.88rem;
+}
+
+#credentials-modal .snapshot-col-heading:first-child {
+  margin-top: 0;
+}
+
+#credentials-modal .snapshot-list li {
+  margin-bottom: 4px;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+#credentials-modal .snapshot-skills-block {
+  gap: 4px;
+}
+
+#credentials-modal .snapshot-skill-tag {
+  font-size: 0.72rem;
+  padding: 2.5px 7px;
+}
+
+#credentials-modal .modal-actions-between {
+  margin-top: 14px !important;
+  padding-top: 12px !important;
+}
+
